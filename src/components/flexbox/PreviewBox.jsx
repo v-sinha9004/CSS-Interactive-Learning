@@ -2,7 +2,7 @@ import './PreviewBox.css'
 
 /** @param {{ flex: { flexDirection: string, flexWrap: string, justifyContent: string, alignItems: string, alignContent: string, gap: number, itemCount: number } }} props */
 export default function PreviewBox({ flex }) {
-  const itemCount = Math.min(50, Math.max(1, Math.floor(flex.itemCount || 1)))
+  const itemCount = Math.min(20, Math.max(1, Math.floor(flex.itemCount || 1)))
 
   const containerStyle = {
     display: 'flex',

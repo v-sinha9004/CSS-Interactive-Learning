@@ -42,9 +42,9 @@ const ALIGN_CONTENT = [
 export default function ControlsPanel({ flex, setFlex }) {
   function update(key, rawValue) {
     const value = (() => {
-      if (key === 'gap') return Math.max(0, Number(rawValue) || 0)
+      if (key === 'gap') return Math.min(20, Math.max(0, Number(rawValue) || 0))
       if (key === 'itemCount')
-        return Math.min(50, Math.max(1, Math.floor(Number(rawValue) || 1)))
+        return Math.min(20, Math.max(1, Math.floor(Number(rawValue) || 1)))
       return rawValue
     })()
     setFlex((prev) => ({ ...prev, [key]: value }))
@@ -135,6 +135,7 @@ export default function ControlsPanel({ flex, setFlex }) {
           type="number"
           className="controls-panel__input"
           min={0}
+          max={20}
           step={1}
           value={flex.gap}
           onChange={(e) => update('gap', e.target.value)}
@@ -147,7 +148,7 @@ export default function ControlsPanel({ flex, setFlex }) {
           type="number"
           className="controls-panel__input"
           min={1}
-          max={50}
+          max={20}
           step={1}
           value={flex.itemCount}
           onChange={(e) => update('itemCount', e.target.value)}

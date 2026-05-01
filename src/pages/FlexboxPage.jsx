@@ -13,7 +13,7 @@ const initialFlex = {
   alignItems: 'stretch',
   alignContent: 'stretch',
   gap: 10,
-  itemCount: 12,
+  itemCount: 5,
 }
 
 export default function FlexboxPage() {

@@ -1,0 +1,39 @@
+.controls-panel__heading {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.controls-panel__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.controls-panel__label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.controls-panel__select,
+.controls-panel__input {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.45rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.controls-panel__input {
+  max-width: 100%;
+}
+
+.controls-panel__select:focus,
+.controls-panel__input:focus {
+  outline: 2px solid var(--accent-border);
+  outline-offset: 1px;
+}

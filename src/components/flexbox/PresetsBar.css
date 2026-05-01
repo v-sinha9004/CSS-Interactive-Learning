@@ -1,0 +1,41 @@
+.presets-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.presets-bar__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-h);
+  margin-right: 0.25rem;
+}
+
+.presets-bar__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.presets-bar__btn {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.presets-bar__btn:hover {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+}
+
+.presets-bar__btn:focus-visible {
+  outline: 2px solid var(--accent-border);
+  outline-offset: 2px;
+}

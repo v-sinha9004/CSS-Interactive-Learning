@@ -1,0 +1,45 @@
+.topic-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 6.5rem;
+  padding: 1.125rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.topic-card__title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-h);
+}
+
+.topic-card__badge {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+.topic-card--enabled {
+  cursor: pointer;
+}
+
+.topic-card--enabled:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.topic-card--disabled {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+}

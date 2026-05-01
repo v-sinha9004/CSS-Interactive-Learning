@@ -3,7 +3,7 @@ import './HomePage.css'
 
 const TOPICS = [
   { id: 'flexbox', title: 'Flexbox', path: '/flexbox', enabled: true },
-  { id: 'grid', title: 'Grid', path: '/grid', enabled: false },
+  { id: 'grid', title: 'Grid', path: '/grid', enabled: true },
   { id: 'positioning', title: 'Positioning', path: '/positioning', enabled: false },
   { id: 'box-model', title: 'Box Model', path: '/box-model', enabled: false },
   { id: 'display', title: 'Display', path: '/display', enabled: false },

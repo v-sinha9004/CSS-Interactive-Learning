@@ -17,6 +17,25 @@ const GRID_TEMPLATE_COLUMNS_PRESETS = [
   { value: 'max-content 1fr', label: 'Max-content + 1fr (max-content 1fr)' },
 ]
 
+const GRID_TEMPLATE_ROWS_PRESETS = [
+  { value: 'auto', label: 'Single auto (auto)' },
+  { value: 'auto auto', label: '2 auto (auto auto)' },
+  { value: 'auto 1fr auto', label: 'Header / body / footer (auto 1fr auto)' },
+  { value: 'repeat(3, auto)', label: '3 auto (repeat(3, auto))' },
+  { value: 'repeat(6, 80px)', label: '6 fixed rows (repeat(6, 80px))' },
+  { value: '120px repeat(3, auto) 1fr', label: 'Mixed (120px repeat(3, auto) 1fr)' },
+]
+
+const GRID_AUTO_TRACK_PRESETS = [
+  { value: 'auto', label: 'auto' },
+  { value: '1fr', label: '1fr' },
+  { value: 'min-content', label: 'min-content' },
+  { value: 'max-content', label: 'max-content' },
+  { value: 'minmax(120px, auto)', label: 'minmax(120px, auto)' },
+  { value: 'minmax(120px, 1fr)', label: 'minmax(120px, 1fr)' },
+  { value: 'minmax(min-content, 1fr)', label: 'minmax(min-content, 1fr)' },
+]
+
 const JUSTIFY_ITEMS = [
   { value: 'start', label: 'start' },
   { value: 'center', label: 'center' },
@@ -65,6 +84,24 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
     ? grid.gridTemplateColumns
     : '__custom__'
 
+  const gridTemplateRowsPresetValue = GRID_TEMPLATE_ROWS_PRESETS.some(
+    (p) => p.value === grid.gridTemplateRows,
+  )
+    ? grid.gridTemplateRows
+    : '__custom__'
+
+  const gridAutoRowsPresetValue = GRID_AUTO_TRACK_PRESETS.some(
+    (p) => p.value === grid.gridAutoRows,
+  )
+    ? grid.gridAutoRows
+    : '__custom__'
+
+  const gridAutoColumnsPresetValue = GRID_AUTO_TRACK_PRESETS.some(
+    (p) => p.value === grid.gridAutoColumns,
+  )
+    ? grid.gridAutoColumns
+    : '__custom__'
+
   return (
     <div className="controls-panel-grid">
       <h2 className="controls-panel-grid__heading">Controls</h2>
@@ -97,6 +134,21 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
 
       <label className="controls-panel-grid__field">
         <span className="controls-panel-grid__label">grid-template-rows</span>
+        <select
+          className="controls-panel-grid__select"
+          value={gridTemplateRowsPresetValue}
+          onChange={(e) => {
+            const next = e.target.value
+            if (next !== '__custom__') update('gridTemplateRows', next)
+          }}
+        >
+          <option value="__custom__">Custom…</option>
+          {GRID_TEMPLATE_ROWS_PRESETS.map((o) => (
+            <option key={o.value} value={o.value}>
+              {o.label}
+            </option>
+          ))}
+        </select>
         <input
           type="text"
           className="controls-panel-grid__input"
@@ -123,6 +175,21 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
 
       <label className="controls-panel-grid__field">
         <span className="controls-panel-grid__label">grid-auto-rows</span>
+        <select
+          className="controls-panel-grid__select"
+          value={gridAutoRowsPresetValue}
+          onChange={(e) => {
+            const next = e.target.value
+            if (next !== '__custom__') update('gridAutoRows', next)
+          }}
+        >
+          <option value="__custom__">Custom…</option>
+          {GRID_AUTO_TRACK_PRESETS.map((o) => (
+            <option key={o.value} value={o.value}>
+              {o.label}
+            </option>
+          ))}
+        </select>
         <input
           type="text"
           className="controls-panel-grid__input"
@@ -134,6 +201,21 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
 
       <label className="controls-panel-grid__field">
         <span className="controls-panel-grid__label">grid-auto-columns</span>
+        <select
+          className="controls-panel-grid__select"
+          value={gridAutoColumnsPresetValue}
+          onChange={(e) => {
+            const next = e.target.value
+            if (next !== '__custom__') update('gridAutoColumns', next)
+          }}
+        >
+          <option value="__custom__">Custom…</option>
+          {GRID_AUTO_TRACK_PRESETS.map((o) => (
+            <option key={o.value} value={o.value}>
+              {o.label}
+            </option>
+          ))}
+        </select>
         <input
           type="text"
           className="controls-panel-grid__input"

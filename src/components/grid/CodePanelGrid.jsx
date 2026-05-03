@@ -5,9 +5,15 @@ function buildCss(grid) {
     'display: grid;',
     `grid-template-columns: ${grid.gridTemplateColumns};`,
     `grid-template-rows: ${grid.gridTemplateRows};`,
-    `gap: ${grid.gap}px;`,
+    `grid-auto-flow: ${grid.gridAutoFlow};`,
+    `grid-auto-rows: ${grid.gridAutoRows};`,
+    `grid-auto-columns: ${grid.gridAutoColumns};`,
+    `row-gap: ${grid.rowGap}px;`,
+    `column-gap: ${grid.columnGap}px;`,
     `justify-items: ${grid.justifyItems};`,
     `align-items: ${grid.alignItems};`,
+    `justify-content: ${grid.justifyContent};`,
+    `align-content: ${grid.alignContent};`,
   ]
   return lines.join('\n')
 }

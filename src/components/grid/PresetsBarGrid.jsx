@@ -7,7 +7,8 @@ const PRESETS = [
     patch: {
       gridTemplateColumns: '1fr 1fr',
       gridTemplateRows: 'repeat(4, auto)',
-      gap: 10,
+      rowGap: 10,
+      columnGap: 10,
     },
   },
   {
@@ -16,7 +17,8 @@ const PRESETS = [
     patch: {
       gridTemplateColumns: '1fr 1fr 1fr',
       gridTemplateRows: 'repeat(3, auto)',
-      gap: 10,
+      rowGap: 10,
+      columnGap: 10,
     },
   },
   {
@@ -27,7 +29,8 @@ const PRESETS = [
       gridTemplateRows: 'repeat(4, auto)',
       justifyItems: 'center',
       alignItems: 'center',
-      gap: 10,
+      rowGap: 10,
+      columnGap: 10,
     },
   },
 ]

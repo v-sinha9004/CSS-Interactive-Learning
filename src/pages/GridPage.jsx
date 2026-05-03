@@ -9,9 +9,15 @@ import './GridPage.css'
 const initialGrid = {
   gridTemplateColumns: '1fr 1fr',
   gridTemplateRows: 'auto auto',
-  gap: 10,
+  gridAutoFlow: 'row',
+  gridAutoRows: 'auto',
+  gridAutoColumns: 'auto',
+  rowGap: 10,
+  columnGap: 10,
   justifyItems: 'stretch',
   alignItems: 'stretch',
+  justifyContent: 'start',
+  alignContent: 'start',
 }
 
 export default function GridPage() {

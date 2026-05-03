@@ -8,9 +8,16 @@ export default function PreviewBoxGrid({ grid }) {
     display: 'grid',
     gridTemplateColumns: grid.gridTemplateColumns,
     gridTemplateRows: grid.gridTemplateRows,
-    gap: `${grid.gap}px`,
+    gridAutoFlow: grid.gridAutoFlow,
+    gridAutoRows: grid.gridAutoRows,
+    gridAutoColumns: grid.gridAutoColumns,
+    rowGap: `${grid.rowGap}px`,
+    columnGap: `${grid.columnGap}px`,
     justifyItems: grid.justifyItems,
     alignItems: grid.alignItems,
+    justifyContent: grid.justifyContent,
+    alignContent: grid.alignContent,
+    height: '400px',
   }
 
   return (

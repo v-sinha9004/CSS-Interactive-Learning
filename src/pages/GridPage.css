@@ -38,7 +38,7 @@
     'presets presets presets'
     'controls preview code';
   gap: 0;
-  min-height: 0;
+  align-items: start;
 }
 
 .grid-page__presets {
@@ -52,23 +52,23 @@
   grid-area: controls;
   border-right: 1px solid var(--border);
   padding: 1rem;
-  min-height: 0;
-  overflow: auto;
 }
 
 .grid-page__preview {
   grid-area: preview;
   padding: 1rem;
-  min-height: 0;
-  overflow: auto;
+  position: sticky;
+  top: 0.75rem;
+  align-self: start;
 }
 
 .grid-page__code {
   grid-area: code;
   border-left: 1px solid var(--border);
   padding: 1rem;
-  min-height: 0;
-  overflow: auto;
+  position: sticky;
+  top: 0.75rem;
+  align-self: start;
 }
 
 @media (max-width: 900px) {
@@ -85,6 +85,12 @@
   .grid-page__controls {
     border-right: none;
     border-bottom: 1px solid var(--border);
+  }
+
+  .grid-page__preview,
+  .grid-page__code {
+    position: static;
+    top: auto;
   }
 
   .grid-page__code {

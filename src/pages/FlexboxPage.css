@@ -38,7 +38,7 @@
     'presets presets presets'
     'controls preview code';
   gap: 0;
-  min-height: 0;
+  align-items: start;
 }
 
 .flexbox-page__presets {
@@ -52,23 +52,23 @@
   grid-area: controls;
   border-right: 1px solid var(--border);
   padding: 1rem;
-  min-height: 0;
-  overflow: auto;
 }
 
 .flexbox-page__preview {
   grid-area: preview;
   padding: 1rem;
-  min-height: 0;
-  overflow: auto;
+  position: sticky;
+  top: 0.75rem;
+  align-self: start;
 }
 
 .flexbox-page__code {
   grid-area: code;
   border-left: 1px solid var(--border);
   padding: 1rem;
-  min-height: 0;
-  overflow: auto;
+  position: sticky;
+  top: 0.75rem;
+  align-self: start;
 }
 
 @media (max-width: 900px) {
@@ -85,6 +85,12 @@
   .flexbox-page__controls {
     border-right: none;
     border-bottom: 1px solid var(--border);
+  }
+
+  .flexbox-page__preview,
+  .flexbox-page__code {
+    position: static;
+    top: auto;
   }
 
   .flexbox-page__code {

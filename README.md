@@ -1,4 +1,4 @@
-# CSS Learning Visualizers (Flexbox + Grid)
+# CSS Interactive Learning
 
 [![React](https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -13,42 +13,9 @@ The UI is optimized for learning: it shows the live preview and the generated CS
 
 ---
 
-## Table of contents
+## Demo
 
-- [Demo / screenshots](#demo--screenshots)
-- [Features](#features)
-- [Tech stack](#tech-stack)
-- [Project structure](#project-structure)
-- [Installation](#installation)
-- [Run locally](#run-locally)
-- [Available scripts](#available-scripts)
-- [Environment variables](#environment-variables)
-- [Build & production](#build--production)
-- [API integration](#api-integration)
-- [State management](#state-management)
-- [Styling](#styling)
-- [Responsive design](#responsive-design)
-- [Performance](#performance)
-- [Future improvements](#future-improvements)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
-## Demo / screenshots
-
-- **Live demo**: _Add link here_ (e.g. GitHub Pages / Vercel / Netlify)
-
-Add screenshots to `public/` and reference them here.
-
-Example:
-
-```md
-![Grid Visualizer](public/screenshots/grid.png)
-![Flexbox Visualizer](public/screenshots/flexbox.png)
-```
-
----
+- **Live demo**: https://css-interactive-learning.vercel.app/
 
 ## Features
 

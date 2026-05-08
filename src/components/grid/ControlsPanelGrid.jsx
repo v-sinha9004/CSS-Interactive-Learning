@@ -1,4 +1,5 @@
 import './ControlsPanelGrid.css'
+import InfoTip from '../ui/InfoTip.jsx'
 
 const GRID_TEMPLATE_COLUMNS_PRESETS = [
   { value: '1fr 1fr', label: '2 equal (1fr 1fr)' },
@@ -107,7 +108,10 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
       <h2 className="controls-panel-grid__heading">Controls</h2>
 
       <label className="controls-panel-grid__field">
-        <span className="controls-panel-grid__label">grid-template-columns</span>
+        <span className="controls-panel-grid__label">
+          grid-template-columns
+          <InfoTip text="Defines the grid’s column tracks (e.g. 1fr 2fr, 200px, repeat(...), minmax(...)). This controls how wide each column is." />
+        </span>
         <select
           className="controls-panel-grid__select"
           value={gridTemplateColumnsPresetValue}
@@ -133,7 +137,10 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
       </label>
 
       <label className="controls-panel-grid__field">
-        <span className="controls-panel-grid__label">grid-template-rows</span>
+        <span className="controls-panel-grid__label">
+          grid-template-rows
+          <InfoTip text="Defines the grid’s row tracks (e.g. auto, 80px, 1fr, repeat(...)). This controls how tall each explicit row is." />
+        </span>
         <select
           className="controls-panel-grid__select"
           value={gridTemplateRowsPresetValue}
@@ -159,7 +166,10 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
       </label>
 
       <label className="controls-panel-grid__field">
-        <span className="controls-panel-grid__label">grid-auto-flow</span>
+        <span className="controls-panel-grid__label">
+          grid-auto-flow
+          <InfoTip text="Controls how auto-placed items fill the grid: by rows or columns. 'dense' can back-fill gaps (may reorder visually)." />
+        </span>
         <select
           className="controls-panel-grid__select"
           value={grid.gridAutoFlow}
@@ -174,7 +184,10 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
       </label>
 
       <label className="controls-panel-grid__field">
-        <span className="controls-panel-grid__label">grid-auto-rows</span>
+        <span className="controls-panel-grid__label">
+          grid-auto-rows
+          <InfoTip text="Sets the size of implicit rows (rows created automatically when content overflows the explicit grid). Useful when items create extra rows." />
+        </span>
         <select
           className="controls-panel-grid__select"
           value={gridAutoRowsPresetValue}
@@ -200,7 +213,10 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
       </label>
 
       <label className="controls-panel-grid__field">
-        <span className="controls-panel-grid__label">grid-auto-columns</span>
+        <span className="controls-panel-grid__label">
+          grid-auto-columns
+          <InfoTip text="Sets the size of implicit columns (columns created automatically when needed). Often used with grid-auto-flow: column." />
+        </span>
         <select
           className="controls-panel-grid__select"
           value={gridAutoColumnsPresetValue}
@@ -226,7 +242,10 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
       </label>
 
       <label className="controls-panel-grid__field">
-        <span className="controls-panel-grid__label">row-gap (px)</span>
+        <span className="controls-panel-grid__label">
+          row-gap (px)
+          <InfoTip text="Adds spacing between grid rows (the gutters horizontally between rows). This is not inside the items; it’s between tracks." />
+        </span>
         <input
           type="number"
           className="controls-panel-grid__input"
@@ -238,7 +257,10 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
       </label>
 
       <label className="controls-panel-grid__field">
-        <span className="controls-panel-grid__label">column-gap (px)</span>
+        <span className="controls-panel-grid__label">
+          column-gap (px)
+          <InfoTip text="Adds spacing between grid columns (the gutters vertically between columns)." />
+        </span>
         <input
           type="number"
           className="controls-panel-grid__input"
@@ -250,7 +272,10 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
       </label>
 
       <label className="controls-panel-grid__field">
-        <span className="controls-panel-grid__label">justify-items</span>
+        <span className="controls-panel-grid__label">
+          justify-items
+          <InfoTip text="Aligns each item inside its grid cell along the inline axis (usually left↔right). stretch makes items fill the cell width." />
+        </span>
         <select
           className="controls-panel-grid__select"
           value={grid.justifyItems}
@@ -265,7 +290,10 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
       </label>
 
       <label className="controls-panel-grid__field">
-        <span className="controls-panel-grid__label">align-items</span>
+        <span className="controls-panel-grid__label">
+          align-items
+          <InfoTip text="Aligns each item inside its grid cell along the block axis (usually top↔bottom). stretch makes items fill the cell height." />
+        </span>
         <select
           className="controls-panel-grid__select"
           value={grid.alignItems}
@@ -280,7 +308,10 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
       </label>
 
       <label className="controls-panel-grid__field">
-        <span className="controls-panel-grid__label">justify-content</span>
+        <span className="controls-panel-grid__label">
+          justify-content
+          <InfoTip text="Aligns the whole grid within the container along the inline axis when the grid is smaller than the container (extra space)." />
+        </span>
         <select
           className="controls-panel-grid__select"
           value={grid.justifyContent}
@@ -295,7 +326,10 @@ export default function ControlsPanelGrid({ grid, setGrid }) {
       </label>
 
       <label className="controls-panel-grid__field">
-        <span className="controls-panel-grid__label">align-content</span>
+        <span className="controls-panel-grid__label">
+          align-content
+          <InfoTip text="Aligns the whole grid within the container along the block axis when there’s extra vertical space. Affects spacing between rows when the grid doesn’t fill the container." />
+        </span>
         <select
           className="controls-panel-grid__select"
           value={grid.alignContent}

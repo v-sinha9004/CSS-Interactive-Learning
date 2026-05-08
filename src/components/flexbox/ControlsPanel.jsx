@@ -1,4 +1,5 @@
 import './ControlsPanel.css'
+import InfoTip from '../ui/InfoTip.jsx'
 
 const FLEX_DIRECTIONS = [
   { value: 'row', label: 'row' },
@@ -55,7 +56,10 @@ export default function ControlsPanel({ flex, setFlex }) {
       <h2 className="controls-panel__heading">Controls</h2>
 
       <label className="controls-panel__field">
-        <span className="controls-panel__label">flex-direction</span>
+        <span className="controls-panel__label">
+          flex-direction
+          <InfoTip text="Sets the main axis direction: row = left→right, column = top→bottom. This changes how items are laid out and how justify/align behave." />
+        </span>
         <select
           className="controls-panel__select"
           value={flex.flexDirection}
@@ -70,7 +74,10 @@ export default function ControlsPanel({ flex, setFlex }) {
       </label>
 
       <label className="controls-panel__field">
-        <span className="controls-panel__label">flex-wrap</span>
+        <span className="controls-panel__label">
+          flex-wrap
+          <InfoTip text="Controls whether items stay on one line (nowrap) or can wrap onto multiple lines (wrap). Use wrap to see multi-line behavior and align-content." />
+        </span>
         <select
           className="controls-panel__select"
           value={flex.flexWrap}
@@ -85,7 +92,10 @@ export default function ControlsPanel({ flex, setFlex }) {
       </label>
 
       <label className="controls-panel__field">
-        <span className="controls-panel__label">justify-content</span>
+        <span className="controls-panel__label">
+          justify-content
+          <InfoTip text="Aligns items along the main axis (row: horizontal, column: vertical). It affects how extra space is distributed between/around items." />
+        </span>
         <select
           className="controls-panel__select"
           value={flex.justifyContent}
@@ -100,7 +110,10 @@ export default function ControlsPanel({ flex, setFlex }) {
       </label>
 
       <label className="controls-panel__field">
-        <span className="controls-panel__label">align-items</span>
+        <span className="controls-panel__label">
+          align-items
+          <InfoTip text="Aligns items along the cross axis (row: vertical, column: horizontal) within each line. stretch makes items grow to fill the cross size." />
+        </span>
         <select
           className="controls-panel__select"
           value={flex.alignItems}
@@ -115,7 +128,10 @@ export default function ControlsPanel({ flex, setFlex }) {
       </label>
 
       <label className="controls-panel__field">
-        <span className="controls-panel__label">align-content</span>
+        <span className="controls-panel__label">
+          align-content
+          <InfoTip text="Aligns the flex lines within the container (only matters when wrapping creates multiple lines). Controls spacing between lines." />
+        </span>
         <select
           className="controls-panel__select"
           value={flex.alignContent}
@@ -130,7 +146,10 @@ export default function ControlsPanel({ flex, setFlex }) {
       </label>
 
       <label className="controls-panel__field">
-        <span className="controls-panel__label">gap (px)</span>
+        <span className="controls-panel__label">
+          gap (px)
+          <InfoTip text="Adds spacing between items (and between lines when wrapping). Unlike margin, it’s managed by the container." />
+        </span>
         <input
           type="number"
           className="controls-panel__input"
@@ -143,7 +162,10 @@ export default function ControlsPanel({ flex, setFlex }) {
       </label>
 
       <label className="controls-panel__field">
-        <span className="controls-panel__label">items</span>
+        <span className="controls-panel__label">
+          items
+          <InfoTip text="How many flex items to render in the preview. Increase to better test wrapping and alignment." />
+        </span>
         <input
           type="number"
           className="controls-panel__input"

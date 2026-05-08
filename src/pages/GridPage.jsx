@@ -12,6 +12,8 @@ const initialGrid = {
   gridAutoFlow: 'row',
   gridAutoRows: 'auto',
   gridAutoColumns: 'auto',
+  previewWidth: '100%',
+  previewHeight: 'auto',
   rowGap: 10,
   columnGap: 10,
   justifyItems: 'stretch',
@@ -40,7 +42,7 @@ export default function GridPage() {
           <ControlsPanelGrid grid={grid} setGrid={setGrid} />
         </aside>
         <section className="grid-page__preview">
-          <PreviewBoxGrid grid={grid} />
+          <PreviewBoxGrid grid={grid} setGrid={setGrid} />
         </section>
         <aside className="grid-page__code">
           <CodePanelGrid grid={grid} />

@@ -12,6 +12,8 @@ const initialFlex = {
   justifyContent: 'flex-start',
   alignItems: 'stretch',
   alignContent: 'stretch',
+  previewWidth: '100%',
+  previewHeight: 'auto',
   gap: 10,
   itemCount: 5,
 }
@@ -36,7 +38,7 @@ export default function FlexboxPage() {
           <ControlsPanel flex={flex} setFlex={setFlex} />
         </aside>
         <section className="flexbox-page__preview">
-          <PreviewBox flex={flex} />
+          <PreviewBox flex={flex} setFlex={setFlex} />
         </section>
         <aside className="flexbox-page__code">
           <CodePanel flex={flex} />
